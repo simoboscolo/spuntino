@@ -1,0 +1,19 @@
+%h2 Here is your Recipe!
+
+%h1= @recipe.name
+
+%p= @recipe.preparation_time
+
+%p= @recipe.ingredients
+
+%p= @recipe.procedure
+
+%p= link_to 'Back', recipes_path
+%p= link_to 'Edit', edit_recipe_path(@recipe)
+%p= link_to 'Delete', recipe_path(@recipe), method: :delete, data: { confirm: 'Are you sure you want to delete this recipe?' }
+
+= render @recipe.comments
+
+%h2 Add a comment:
+ 
+= render 'comments/form'

@@ -1,0 +1,11 @@
+%h1 Listing all recipes
+
+%p= link_to 'New Recipe', new_recipe_path
+
+- @recipes.each do |recipe|
+
+	%h2= recipe.name
+	%p= recipe.preparation_time
+	%p= link_to 'Show', recipe_path(recipe)
+	%p= link_to 'Edit', edit_recipe_path(recipe)
+	%hr
