@@ -1,11 +1,20 @@
-%h1 Listing all recipes
+.content
 
-%p= link_to 'New Recipe', new_recipe_path
+	= image_tag("/images/spuntino_logo_black.svg", :class => "mini")
 
-- @recipes.each do |recipe|
+	%h1 Your Spuntino starts here
+	%p Create and discover recipes with a maximum preparation time of 20 minutes. Keywords are Health and Taste!
 
-	%h2= recipe.name
-	%p= recipe.preparation_time
-	%p= link_to 'Show', recipe_path(recipe)
-	%p= link_to 'Edit', edit_recipe_path(recipe)
-	%hr
+	%a= link_to 'New Recipe', new_recipe_path
+
+	%hr.clear
+
+	- @recipes.each do |recipe|
+
+		%h2= recipe.name
+		%p= "time: #{recipe.preparation_time} min"
+		%p= "chef: #{recipe.user.email}"
+		%a= link_to 'Show', recipe_path(recipe)
+		- if recipe.user_id == current_user.id
+			%a= link_to 'Edit', edit_recipe_path(recipe)
+		%hr.clear

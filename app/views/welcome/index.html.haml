@@ -1,8 +1,17 @@
-%h1 Spuntino
+.home
+	= image_tag("/images/home.jpg")
 
+.logo
+	= image_tag("/images/spuntino_logo.svg")	
 
--if user_signed_in?
-	%p= link_to 'Logout', destroy_user_session_path, :method => :delete
--else
-	%p= link_to 'Login', new_user_session_path
+.content
+	.log_in_form
+		-if user_signed_in?
+			%p.btn_home Start Discovering fast and healthy recipes! 
+			%br
+			%br
+			%p.btn_home= link_to 'Discover', recipes_path
+			%p.btn_home= link_to 'Logout', destroy_user_session_path, :method => :delete
+		-else
+			= render 'devise/sessions/new'
 

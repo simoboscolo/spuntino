@@ -1,6 +1,8 @@
-= form_for ([@recipe, @recipe.comments.build]) do |f|
-	
-	%p= f.label :comment
-	%p= f.text_area :comment
+.comment_form
 
-	%p= f.submit
+	= form_for ([@recipe, @recipe.comments.build]) do |f|
+		
+		%p= f.label :comment
+		%p= f.text_area :comment, :class => "field"
+
+		%p= f.submit

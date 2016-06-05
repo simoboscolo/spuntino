@@ -1,3 +1,45 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comment_form {
+
+	textarea {
+		color: #000;
+		border: none;
+		border-bottom: 2px solid #000;
+		background-color: transparent;
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+
+	textarea:focus {
+		outline: none;
+		border-bottom: 4px solid #000;
+		font-size: 26px;
+		background: rgba(0,0,0,0.2);
+		padding: 5px;
+	}
+
+	input {
+		color: #000;
+		border: none;
+		border-bottom: 2px solid #000;
+		background-color: transparent;
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+
+	input:focus {
+		outline: none;
+		border-bottom: 4px solid #000;
+		font-size: 26px;
+		background: rgba(0,0,0,0.2);
+		padding: 5px;
+	}
+
+	.field {
+		width: 100%;
+	}
+
+}

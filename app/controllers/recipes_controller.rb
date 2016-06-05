@@ -1,12 +1,16 @@
 class RecipesController < ApplicationController
 
+	before_filter :authenticate_user!
+
 	def index
 		@recipes = Recipe.all
 	end
 
 	def show
 		@recipe = Recipe.find(params[:id])
+		@user = User.find(params[:id])
 		@list_of_ingredients = @recipe.ingredients.split(",")
+		@preparation_phases = @recipe.procedure.split("/")
 	end
 
 	# create a new recipe 

@@ -1,3 +1,113 @@
 // Place all the styles related to the recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.top_recipe {
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+	position: fixed;
+	z-index: -9999;
+	margin-top: -372px;
+	img {
+		width: 100%;
+	}
+}
+
+.recipe_content {
+	margin-top: 340px;
+
+	h1 {
+		font-size: 100px;
+		color: #fff;
+		border-bottom: 5px solid #fff;
+	}
+
+	.recipe_content_background {
+		background-color: #fff;
+		padding: 25px;
+		margin-top: -60px;
+	}
+
+	.ingredients {
+		float: left;
+		width: 40%;
+	}
+
+	.preparation {
+		float: left;
+		width: 60%;
+	}
+
+	a {
+	 	text-decoration: none;
+	 	color: #000;
+	 	float: left;
+	 	margin-right: 10px;
+	 }
+
+ 	a:hover {
+	 	border-bottom: 2px solid #000;
+	 }
+}
+
+.recipe_form {
+
+	textarea {
+		color: #000;
+		border: none;
+		border-bottom: 2px solid #000;
+		background-color: transparent;
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+
+	textarea:focus {
+		outline: none;
+		border-bottom: 4px solid #000;
+		font-size: 26px;
+		background: rgba(0,0,0,0.2);
+		padding: 5px;
+	}
+
+	input {
+		color: #000;
+		border: none;
+		border-bottom: 2px solid #000;
+		background-color: transparent;
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+
+	input:focus {
+		outline: none;
+		border-bottom: 4px solid #000;
+		font-size: 26px;
+		background: rgba(0,0,0,0.2);
+		padding: 5px;
+	}
+
+	.field {
+		width: 100%;
+	}
+
+	.area {
+		height: 200px;
+	}
+
+	.ing {
+		height: 100px;
+	}
+
+	.form_text {
+		font-size: 14px;
+		color: red;
+	}
+
+}
+
+.mini {
+	width: 200px;
+	margin-top: 40px;
+}

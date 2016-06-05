@@ -1,25 +1,29 @@
-=form_for @recipe do |f|
+.recipe_form
 
-	- if @recipe.errors.any?
-		#error_explanation
-			%h2= "#{pluralize(@recipe.errors.count, "error")} found:"
-			%ul
-				- @recipe.errors.full_messages.each do |msg|
-					%li= msg
+	=form_for @recipe do |f|
 
-	%p= f.label :name
-	%p= f.text_field :name
+		- if @recipe.errors.any?
+			#error_explanation
+				%h2= "#{pluralize(@recipe.errors.count, "error")} found:"
+				%ul
+					- @recipe.errors.full_messages.each do |msg|
+						%li= msg
 
-	%p= f.label :preparation_time
-	%p= f.text_field :preparation_time
-	%p 20 minutes is the maximum
+		%p= f.label :name
+		%p= f.text_field :name, :class => "field"
 
-	%p= f.label :ingredients
-	%p= f.text_area :ingredients
+		%p= f.label :preparation_time
+		%p.form_text 20 minutes is the maximum time allowed.
+		%p= f.text_field :preparation_time, :class => "field"
 
-	%p= f.label :procedure
-	%p= f.text_area :procedure
+		%p= f.label :ingredients
+		%p.form_text Separate ingredients with comma. (Example: 200g Flour, 100g Chocolate, ... )
+		%p= f.text_area :ingredients, :class => "field ing"
 
-	%p= f.file_field :avatar
+		%p= f.label :procedure
+		%p.form_text Type "/" to create a different paragraph in the preparation.
+		%p= f.text_area :procedure, :class => "field area"
 
-	%p= f.submit 'save'
+		%p= f.file_field :avatar, :class => "field"
+
+		%p= f.submit 'save'

@@ -5,10 +5,6 @@ class CommentsController < ApplicationController
 		@comment = @recipe.comments.create(comment_params)
 		@comment.user_id = current_user.id
 
-		puts "+================+"
-		puts @comment.user_id
-		puts "+================+"
-
     	redirect_to recipe_path(@recipe)
    end
 
@@ -22,6 +18,6 @@ class CommentsController < ApplicationController
    private
 
     	def comment_params
-    		params.require(:comment).permit(:comment, :body)
+    		params.require(:comment).permit(:comment, :user_id)
     	end
 end
