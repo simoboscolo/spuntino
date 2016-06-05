@@ -1,6 +1,7 @@
 %p= comment.comment
+%p= comment.user_id
 
--if current_user.id = 1 
+-if current_user.id == 1
 
 	%p= link_to  'Destroy Comment', [comment.recipe, comment], method: :delete, data: { confirm: 'Are you sure?' }
 

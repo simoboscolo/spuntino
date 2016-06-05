@@ -1,0 +1,11 @@
+%p= @user.email
+%p= @user.id
+
+%img= image_tag @user.avatar.url
+
+= render @user.recipes
+
+- if @user.id == current_user.id
+
+	= render 'devise/registrations/edit'
+	= render 'form'

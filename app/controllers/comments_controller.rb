@@ -4,7 +4,11 @@ class CommentsController < ApplicationController
 		@recipe = Recipe.find(params[:recipe_id])
 		@comment = @recipe.comments.create(comment_params)
 		@comment.user_id = current_user.id
-		
+
+		puts "+================+"
+		puts @comment.user_id
+		puts "+================+"
+
     	redirect_to recipe_path(@recipe)
    end
 
@@ -14,7 +18,6 @@ class CommentsController < ApplicationController
 		@comment.destroy
 		redirect_to recipe_path(@recipe)
    end
-
 
    private
 
