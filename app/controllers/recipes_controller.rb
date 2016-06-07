@@ -8,7 +8,7 @@ class RecipesController < ApplicationController
 
 	def show
 		@recipe = Recipe.find(params[:id])
-		@user = User.find(params[:id])
+		# @user = User.find(params[:id])
 		@list_of_ingredients = @recipe.ingredients.split(",")
 		@preparation_phases = @recipe.procedure.split("/")
 	end
