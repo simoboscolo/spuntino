@@ -2,3 +2,96 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.user {
+	.user_info {
+		margin-top: 50px;
+		margin-left: 330px;
+	}
+
+	.avatar {
+		width: 250px;
+		height: 250px;
+		overflow: hidden;
+		border-radius: 50%;
+		position: fixed;
+
+		img {
+			height: 100%;
+		}
+	}
+
+	.list {
+		margin-left: 330px;
+	}
+
+	a {
+	 	text-decoration: none;
+	 	color: #000;
+	 	float: left;
+	 	margin-right: 10px;
+	 }
+
+	a:hover {
+	 	border-bottom: 2px solid #000;
+	 }
+}
+
+
+.user_form {
+
+	width: 100%;
+
+	textarea {
+		width: 100%;
+		color: #000;
+		border: none;
+		border-bottom: 2px solid #000;
+		background-color: transparent;
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+
+	textarea:focus {
+		outline: none;
+		border-bottom: 4px solid #000;
+		font-size: 26px;
+		background: rgba(0,0,0,0.2);
+		padding: 5px;
+	}
+
+	input {
+		color: #000;
+		border: none;
+		border-bottom: 2px solid #000;
+		background-color: transparent;
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+
+	input:focus {
+		outline: none;
+		border-bottom: 4px solid #000;
+		font-size: 26px;
+		background: rgba(0,0,0,0.2);
+		padding: 5px;
+	}
+
+	.field {
+		width: 100%;
+	}
+
+	.area {
+		height: 200px;
+	}
+
+	.ing {
+		height: 100px;
+	}
+
+	.form_text {
+		font-size: 14px;
+		color: red;
+	}
+
+}

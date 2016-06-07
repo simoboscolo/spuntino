@@ -1,11 +1,28 @@
-%p= @user.email
-%p= @user.id
+.content
+	.user
 
-%img= image_tag @user.avatar.url
+		.clear
 
-= render @user.recipes
+		.avatar
 
-- if @user.id == current_user.id
+			%img= image_tag @user.avatar.url
 
-	= render 'devise/registrations/edit'
-	= render 'form'
+		.user_info
+
+			%h1= @user.email
+			%p= "User ##{@user.id}"
+
+		.clear
+
+		.list
+
+			%h2 Recipes from chef:
+
+			= render @user.recipes
+
+			- if @user.id == current_user.id
+
+				= render 'devise/registrations/edit'
+				.clear
+				%br
+				= render 'form'

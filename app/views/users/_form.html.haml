@@ -1,5 +1,7 @@
-=form_for @user do |f|
-	
-	%p= f.file_field :avatar
+.user_form
 
-	%p= f.submit
+	=form_for @user do |f|
+		
+		%p= f.file_field :avatar
+
+		%p= f.submit
